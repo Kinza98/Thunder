@@ -73,6 +73,9 @@ window.addEventListener("load", function(){
         length: Math.random()*20+10,
         dy: Math.random()*5+10,
       }
+      if(canvas.width < 400){
+        obj.length = Math.random()*20+5
+      }
       drops.push(obj)
     }
   }
