@@ -117,10 +117,18 @@ window.addEventListener("load", function(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     skyEffect();
     if(Math.random() < 0.05){
-      flashScreen()
+      flashScreen();
+      <audio controls>
+      <source src="lightening.mp3" type="audio/mp3">
+       your browser does not support the audio element.
+    </audio>
       lightening();
     }
     intensityChange();
+    <audio controls>
+      <source src="rain.mp3" type="audio/mp3">
+       your browser does not support the audio element.
+    </audio>
     drawRainDrop();
     requestAnimationFrame(thunder)
   }
