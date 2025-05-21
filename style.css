@@ -11,6 +11,42 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: right;
-  background-size: cover;
-  color: #0a0a1e
+  background-size: cover;  
+}
+
+#preloader{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  right: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  background-color: black;
+  color: rgb(35, 178, 218);
+  font-size: 20px;
+  font-family: system-ui;
+}
+
+#preloader .loader{
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 50%;
+  border-color: white;
+  border-top-color: rgb(126, 155, 163);
+  border-style: dotted;
+  border-width: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

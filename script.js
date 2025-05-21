@@ -1,4 +1,5 @@
 window.addEventListener("load", function(){
+  this.document.getElementById("preloader").style.display = "none";
   const canvas = this.document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
 
@@ -12,7 +13,7 @@ window.addEventListener("load", function(){
   resizeCanvas();
   
   function flashScreen() {
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
+    ctx.fillStyle = 'rgb(144 142 142 / 53%)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
   }
 
@@ -20,7 +21,7 @@ window.addEventListener("load", function(){
   function skyEffect(){
     let gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
     gradient.addColorStop(0, '#0a0a1ee0');
-    gradient.addColorStop(1, '#2c2c3ae0');
+    gradient.addColorStop(1, '#2c2c3ae6');
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, canvas.width, canvas.height)
   }
@@ -109,8 +110,10 @@ window.addEventListener("load", function(){
   function thunder(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     skyEffect();
-    if(Math.random() < 0.1){
+    if(Math.random() <0.2){
       flashScreen()
+    }
+    if(Math.random() < 0.1){
       lightening();
     }
     intensityChange();
