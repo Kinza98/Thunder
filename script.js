@@ -89,7 +89,7 @@ window.addEventListener("load", function(){
 
   function drawRainDrop(){
     dx = Math.random()*2-2;
-    let rainColors = ["#cccccc", "#6ec6ff", "#666666", "#a0c4ff"]
+    let rainColors = ["#cccccc", "#666666", "#a0c4ff"]
     for(let drop of drops){
       ctx.beginPath();
       ctx.moveTo(drop.x, drop.y);
