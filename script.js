@@ -1,4 +1,6 @@
 window.addEventListener("load", function(){
+  const rainSound = document.getElementById("rainSound");
+  const lightSound = document.getElementById("lightSound");
   this.document.getElementById("preloader").style.display = "none";
   const canvas = this.document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
@@ -117,10 +119,13 @@ window.addEventListener("load", function(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     skyEffect();
     if(Math.random() < 0.05){
+      lightSound.currentTime = 0;  // rewind to start
+      lightSound.play();
       flashScreen();
       lightening();
     }
     intensityChange();
+    rainSound.muted = false;
     drawRainDrop();
     requestAnimationFrame(thunder)
   }
