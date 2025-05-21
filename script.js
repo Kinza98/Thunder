@@ -78,7 +78,10 @@ window.addEventListener("load", function(){
   
   function intensityChange(){
     drops.length = 0;
-    rainIntensity = Math.random()*20+500;
+    let m = 500;
+    if(canvas.width <=400)
+      m = 300;
+    rainIntensity = Math.random()*20+m;
     createDrops();
   };
   intensityChange();
