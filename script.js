@@ -89,11 +89,14 @@ window.addEventListener("load", function(){
 
   function drawRainDrop(){
     dx = Math.random()*2-2;
+    let rainColors = ["#cccccc", "#6ec6ff", "#666666", "#a0c4ff"]
     for(let drop of drops){
       ctx.beginPath();
       ctx.moveTo(drop.x, drop.y);
       ctx.lineTo(drop.x+dx, drop.y+drop.length);
-      ctx.strokeStyle = "white";
+      ctx.strokeStyle = "#666666";
+      if(Math.random() <0.05)
+        ctx.strokeStyle = rainColors[Math.floor(Math.random()*rainColors.length)];
       ctx.shadowBlur = 0;
       ctx.stroke();
 
