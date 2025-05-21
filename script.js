@@ -116,10 +116,8 @@ window.addEventListener("load", function(){
   function thunder(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     skyEffect();
-    if(Math.random() <0.2){
+    if(Math.random() < 0.05){
       flashScreen()
-    }
-    if(Math.random() < 0.1){
       lightening();
     }
     intensityChange();
