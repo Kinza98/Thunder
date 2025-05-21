@@ -118,17 +118,17 @@ window.addEventListener("load", function(){
     skyEffect();
     if(Math.random() < 0.05){
       flashScreen();
-      <audio controls>
-      <source src="lightening.mp3" type="audio/mp3">
-       your browser does not support the audio element.
-    </audio>
+      <audio src="lightening.mp3" autoplay>
+<p>If you are reading this, it is because your browser does not support the audio element.     </p>
+<embed src="lightening.mp3" width="180" height="90" hidden="true" />
+</audio>
       lightening();
     }
     intensityChange();
-    <audio controls>
-      <source src="rain.mp3" type="audio/mp3">
-       your browser does not support the audio element.
-    </audio>
+    <audio src="rain.mp3" autoplay>
+<p>If you are reading this, it is because your browser does not support the audio element.     </p>
+<embed src="rain.mp3" width="180" height="90" hidden="true" />
+</audio>
     drawRainDrop();
     requestAnimationFrame(thunder)
   }
